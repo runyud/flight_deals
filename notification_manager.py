@@ -22,10 +22,6 @@ class NotificationManager:
                             f"{destination_city_name}-{destination_iata_code}, from {outbound_date} to {inbound_date}."
         client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
-        print("TWILIO SID is " + TWILIO_SID)
-        print("TWILIO AUTH TOKEN is " + TWILIO_AUTH_TOKEN)
-        print("FROM NUMBER is " + FROM_NUMBER)
-        print("TO NUMBER is " + TO_NUMBER)
         message = client.messages.create(
             body=formatted_message,
             from_=FROM_NUMBER,

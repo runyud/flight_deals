@@ -38,9 +38,8 @@ for sheet in sheet_data:
     search_result = search.search_flights(dest)
     if search_result is not None:
         print(f"{search_result.destination_city}: ${search_result.price}")
-    # TODO: final step is to check if any of the flights found are cheaper than the Lowest Price listed in the Google
-    #  Sheet. If so, then we should use the Twilio API to send an SMS with enough information to book the flight. You
-    #  should use the NotificationManager for this job.
+    #  final step is to check if any of the flights found are cheaper than the Lowest Price listed in the Google
+    #  Sheet. If so, then we should use the Twilio API to send an SMS with enough information to book the flight.
         if search_result.price < lowest_price:
             notification_manager = NotificationManager(search_result)
             notification_manager.send_sms()
