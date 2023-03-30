@@ -28,5 +28,9 @@ TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
 FROM_NUMBER = os.environ.get("FROM_NUMBER")
 TO_NUMBER = os.environ.get("TO_NUMBER")
 
+# Email configs
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
+
 
 
